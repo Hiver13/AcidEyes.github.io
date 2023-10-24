@@ -1,82 +1,252 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta author="Человек">
-    <meta description="AcidEyes Best Lua">
-    <title>Мой сайт</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="game.css">
-    <link rel="stylesheet" href="background.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AcidEyes.lua Best Lua</title>
+    <link rel="stylesheet" href="styles.css" >
+    <style>
+.navigation {
+    height: 70px;
+    border: #262626;
+    border-radius: 70px;
+}
+
+nav ul li {
+    float: left;
+    position: relative;
+}
+
+nav ul li a, nav ul li a:visited {
+    display: block;
+    padding: 0 20px;
+    line-height: 70px;
+    border-color: #40334d;
+    border-radius: 15px;
+    background: #ffffff5e;
+    color: #2ffd33;
+    text-decoration: none;
+}
+
+nav ul li a:hover, nav ul li a:visited:hover {
+    color: rgb(122 214 22);
+	text-decoration: none !important;
+}
+
+nav ul li a:not(:only-child):after, nav ul li a:visited:not(:only-child):after {
+    padding-left: 4px;
+    content: ' ▾';
+}
+
+nav ul li ul li {
+    min-width: 190px;
+}
+
+nav ul li ul li a {
+    padding: 15px;
+    line-height: 20px;
+}
+
+.nav-dropdown {
+    position: absolute;
+    display: none;
+    z-index: 1;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+}
+        /* Фон*/
+        #myVideo {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: 0;
+        }
+
+       
+       @font-face {
+
+            font-family: "Arkanoid Solid";
+            src: url('./fonts/Arka_solid.ttf') format("truetype");
+
+        }
+        
+        .Acid {
+            stroke-width: 4px;
+            letter-spacing: 3px;
+            font-weight: 400;
+            font-family : "Arkanoid Solid";
+            fill : transparent;
+            stroke-dasharray:100%;
+            stroke-dashoffset:0;
+            animation-name: outline;
+            animation-duration: 3.5s;
+            animation-timing-function: ease-in;
+            animation-fill-mode: forwards;
+        }
+
+        .AcidDesc {
+            stroke-width: 4px;
+            letter-spacing: 3px;
+            font-weight: 400;
+            /*noinspection CssNoGenericFontName*/
+            font-family : Arial;
+            fill : transparent;
+            stroke-dasharray:100%;
+            stroke-dashoffset:0;
+            animation-name: outline;
+            animation-duration: 3.5s;
+            animation-timing-function: ease-in;
+            animation-fill-mode: forwards;
+        }
+
+        #Acid {
+            width: 100%;
+            height: 25vw;
+            margin-top: 35px;
+        }
+
+        .small {
+            font-size: 13vw;
+        }
+        .large {
+            font-size: 10vw;
+        }
+        #largeDesc {
+            stroke-width: 2px;
+            font-size: 7vw;
+        }
+        #smallDesc {
+            stroke-width: 1px;
+            font-size: 7vw;
+        }
+
+
+        .small { display: none; }
+
+        @media (max-width: 988px) {
+            .small { display: inline-block; }
+            .large { display: none; }
+            #myVideo {
+                left: -350px
+            }
+        }
+
+        @keyframes outline{
+            from{
+                stroke-dashoffset:100%;
+            }
+
+            to{
+                stroke-dashoffset:0;
+            }
+        }
+
+        /* Css кнопки */
+        .btn-outline {
+            color: white;
+            background-color: transparent;
+            border-color: #40934d;
+            font-weight: bold;
+            letter-spacing: 0.05em;
+        }
+
+        .btn-outline {
+            color: white;
+            background-color: transparent;
+            border-color: #40934d;
+            font-weight: bold;
+            border-radius: 3px;
+            border-width: 2px;
+            transition: color .4s linear;
+        }
+
+        .btn-outline:hover,
+        .btn-outline:active,
+        .btn-outline:focus {
+            color: #2ffd33;
+        }
+        #buttonDiv {
+            text-align: center;
+            margin-left: 1vw !important;
+            width: 98vw !important;
+            max-width: 98vw !important;
+        }
+        .btn {
+            width: 100%;
+            max-width: 300px;
+            height: 50px;
+            margin-top: 15px !important;
+            padding-top: 10px !important;
+        }
+
+        @media (min-width: 768px) and (max-width: 992px) {
+            #pad {
+                display: inline-block !important;
+            }
+        }
+
+    </style>
 </head>
 <body>
-        <!--aboba-->
-    <div class="navbar">
-        <div class="logo"><h4>AcidEyes</span>.Lua</div>
-        <div class="items">
-            <li><a href="rules.html">Правила</a></li>
-            <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Про нас</a></li>
+<video autoplay muted loop id="myVideo">
+    <source src="./shit/edit.mp4" type="video/mp4">
+    "aboba code 1"
+    <!-- aboba code 1 означает что не подерживается html5 видео в браузре-->
+</video>
+<!-- Кнопки -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark position-absolute " id="nav">
+    <div class="container" id="top">
+        <h1>acid project pro4ital gay</h1>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="https://discord.gg/t63ExhHMvd">Купить</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="rules.html">Правила</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Обзор</a>
+                </li>
+            </div>
         </div>
+    </nav>
+
+<div id="content">
+    <div id="padding-header">
     </div>
-        <!--aboba-->
-    <!--amogus-->
-    <body>
-  
-        <div class="glowing">
-          
-          <span style="--i:1;"></span>
-          
-          <span style="--i:2;"></span>
-          
-          <span style="--i:3;"></span>
-          
-        </div>
-        
-        <div class="glowing">
-          
-          <span style="--i:1;"></span>
-          
-          <span style="--i:2;"></span>
-          
-          <span style="--i:3;"></span>
-          
-        </div>
-        
-        <div class="glowing">
-          
-          <span style="--i:1;"></span>
-          
-          <span style="--i:2;"></span>
-          
-          <span style="--i:3;"></span>
-          
-        </div>
-        
-        <div class="glowing">
-          
-          <span style="--i:1;"></span>
-          
-          <span style="--i:2;"></span>
-          
-          <span style="--i:3;"></span>
-          
-        </div>
-        
-      </body>
-    <!--amogus-->
-    <div class="form">
-        <h4></h4>
-        <h4></h4>
-        <h4></h4>
-        <div class="login">
-        <input text="buy" maxlength="17">
-        <a href="https://discord.gg/t63ExhHMvd">
-            <button type="button">
-              BUY AcidEyes.lua FOR LIFETIME
-            </button>
-          </a>
-        </div>
-        </div>
-    </div>
+    <div id="mainContent">
+        <svg id="Acid">
+            <!-- Градиент -->
+            <defs>
+                <linearGradient id="gradient" x1="0" x2="1">
+                    <stop stop-color="#2ffd33" offset="0"/>
+                    <stop stop-color="white" offset="1"/>
+                </linearGradient>
+            </defs>
+            <!-- текст титл -->
+            <symbol id="AcidTitle">
+                <text text-anchor="middle" x="50%"  y="50%" class="text--line Acid large" >
+                    AcidEyes
+                </text>
+                <text text-anchor="middle" x="50%"  y="50%" class="text--line Acid small" >
+                    Acid
+                </text>
+                <text text-anchor="middle" x="50%"  y="80%" class="text--line AcidDesc large" id="largeDesc">
+                    AcidEyes.lua 
+                </text>
+                <text text-anchor="middle" x="50%"  y="80%" class="text--line AcidDesc small" id="smallDesc">
+                    Good Lua Good Time
+                </text>
+            </symbol>
+
+            <!-- Текст -->
+            <g class="g-ants">
+                <use xlink:href="#AcidTitle"
+                     class="text-copy" id="outLineAcid" stroke="url(#gradient)"></use>
+            </g>
+
+
+        </svg>
 </body>
 </html>
