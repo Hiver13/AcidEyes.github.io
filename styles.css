@@ -1,0 +1,51 @@
+html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+    scroll-behavior: smooth;
+    height: 100vh;
+}
+
+#top {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    width: 100%;
+    max-width: 100%;
+    height: 20%;
+}
+
+/* Размер */
+#logoSmall {
+    height: 50px;
+    width: 80px;
+}
+
+#nav {
+    background-color: #141414 !important;
+    border-bottom: solid #40934d 5px;
+    width: 100%;
+    z-index: 2;
+}
+
+@media (max-width: 988px) {
+    #navbarResponsive {
+        border-top: 1px #40934d solid;
+        margin-top: 8px;
+    }
+}
+
+#content {
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+
+}
+
+#padding-header {
+    height: 81px;
+}
+
+#mainContent {
+    background-color: transparent;
+    flex-grow: 1;
+    z-index: 1;
+}
